@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"content="width-device-width,initial-scale="1.0>
+<title>Businesses</title>
+<style>
+
+
+/*starts here*/
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url('unnamed.jpg');
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 750px;
+  top: 0;
+  left: 0;
+  background-color: rgb(202, 192, 192);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+  background-image: url('unnamed.jpg');
+  background-repeat: no-repeat;
+}
+
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(58, 51, 51);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-left: 1450px;
+ 
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+h1{text-align: center;
+  color: rgb(0, 0, 0);
+}
+.img{text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+input[type=text],select,textarea{
+   width: 50%;
+   padding: 5px;
+   border: 1px solid #000000;
+   padding-top: 4px;
+   padding-bottom: 10px;    
+   resize: vertical;
+   
+}
+input[type=submit]:hover{
+background-color: grey;
+}
+input[type=submit]{
+    background-color: #4caf50;
+    color: beige;
+    padding: 10px 90px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px 90px;
+    padding-left: 20px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+/*anime here*/
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+   
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(8, 8, 8, 0.75);}
+  to{border-right-color: transparent;}
+}
+</style>
+</head>
+<body>
+
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="about">About</a>
+    <a href="more.html">Life after Lockdown</a>
+    <a href="advertisement.html">advertisement</a>
+    <a href="contact">Contact</a>
+    <a href="index(1).html">Qhabukazi</a>
+    <a href="find us.html">Find us</a>
+    <a href="business.html">Business</a>
+    <a href="school.html">School</a>
+    <a href="members page.html">Members</a>
+  
+  </div>
+  
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  
+   <br><br>
+   <div>
+    <h2 class="line-1 anim-typewriter">Qhabukazi-programmes...</h2>
+  </div>
+ 
+
+
+<div class="img">
+<img src="unnamed.jpg" width="300px" height="300px">
+
+</div>
+
+
+
+
+<h2>Privacy Policy</h2>
+<p><!--go online and go to pinterests page of privacy and policy and take all the information there i dont have time to type it all because it was the same thing --></p>
+
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  </script>
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+          
+    
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contribution.html">Contribute</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+           <a href="https://qhabukazi-programmes.myshopify.com">Qhabukazi-programmes</a>.
+              </p>
+            </div>
+    
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+           <!---    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   -->
+                <a target="_blank"href="https://www.instagram.com/Qhaweviice/?fbclid=IwAR2WyqHnXVrnNxlRRGKru0z8F2ITrbD4DNImAVJewOFHmsqzAwLH9_kS8Ys">  <img src="images.jpg" width="30px" height="30px"style="padding: 10px;"></a>
+                <a target="_blank"href="https://twitter.com/QViice"><img src="124021.png" width="30px" height="30px"style="padding: 10px;"></a> 
+                <a target="_blank" href="https://www.facebook.com/azola.ntinzi.54"><img src="fe0.jpg" width="30px" height="30px"style="padding: 10px;"></a>
+                <a target="_blank"href="https://web.whatsapp.com/"><img src="Wicon.png" width="30px" height="30px"style="padding: 10px;"></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+    
+     
+</body>
+</html>

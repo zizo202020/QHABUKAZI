@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width-device-width,initial-scale="1.0>
+        <title>Find Us</title>
+        <style>
+                html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #map-canvas{
+        width: 40%;
+        height: 50%;
+        float: right;
+        margin-top: 5%;
+        margin-right: 0%;
+      }
+            .form{
+    margin-top: 30px;
+    margin-left: 0%;
+    box-shadow: 10px;
+    width: 50%;
+    height: 40%;
+    text-align: left;
+    background-color:white;
+    color: #333;
+
+}
+input[type=text],select,textarea{
+   width: 90%;
+   padding: 5px;
+   border: 1px solid #333;
+   padding-top: 4px;
+   padding-bottom: 10px;    
+   resize: vertical;
+   
+}
+input[type=submit]{
+    background-color: #4caf50;
+    color: beige;
+    padding: 10px 90px;
+    border: none;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color:#ccc;
+
+}
+label{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.location{
+  padding-top: 15px;
+}
+.container{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+        </style>
+          <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+          <script>
+      
+      var map;
+      
+      function initialize() {
+        var mapOptions = {
+          zoom: 16
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      
+        // Try HTML5 geolocation
+        if(navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = new google.maps.LatLng(position.coords.latitude,
+                                             position.coords.longitude);
+      
+            var infowindow = new google.maps.InfoWindow({
+              map: map,
+              position: pos,
+              content: 'Location found using HTML5.'
+            });
+      
+            map.setCenter(pos);
+          }, function() {
+            handleNoGeolocation(true);
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleNoGeolocation(false);
+        }
+      
+        var centerControlDiv = document.createElement('div');
+        var centerControl = new CenterControl(centerControlDiv, map, chicago);
+      
+        centerControlDiv.index = 1;
+        map.controls[google.maps.ControlPosition.BOTTOM_LEFT].push(centerControlDiv);
+      
+      }
+      
+      function handleNoGeolocation(errorFlag) {
+        if (errorFlag) {
+          var content = 'Error: The Geolocation service failed.';
+        } else {
+          var content = 'Error: Your browser doesn\'t support geolocation.';
+        }
+      
+        var options = {
+          map: map,
+          position: new google.maps.LatLng(60, 105),
+          content: content
+        };
+      
+        var infowindow = new google.maps.InfoWindow(options);
+        map.setCenter(options.position);
+      
+      
+      }
+      
+      
+      
+      
+      
+      
+      google.maps.event.addDomListener(window, 'load', initialize);
+      
+      
+      
+      
+          </script>
+    </head>
+    <body>
+      <div id="map-canvas"></div>
+<h1>Find Us</h1>
+<form action="https://formspree.io/f/mknkovkz"method="POST" class="form">
+    <label for="First Name">First Name :</label>
+         <input type="text"id="fname"name="First name"placeholder="First Name"required><br>
+            <label for="Last Name">Last name :</label>
+         <input type="text"id="lname"name="Last name"placeholder="Last Name"required><br>
+         <label for="contact N.o">Contact N.o</label>
+         <input type="text"id="contact"number="Contact"placeholder="Contact N.o"required><br>
+    <label for="Location">Location :</label><br>
+        <select id="Location"name="Location"placeholder="Location"required><br>
+            <option value="Langa"required>Langa</option>
+            <option value="Phillipi"required>Phillipi</opption>
+            <option value="Delft"required>Delft</option>
+            <option value="Khayelitsha"required>Khayelitsha</optioin>
+                <option value="Other"required>Other</option>
+        </select><br>
+<label for="Subject">Subject</label><br>
+<textarea id="Subject"name="Subject"placeholder="Order Here..."required style="height: 110px;"></textarea>
+<input type="submit"value="Submit">
+</form>
+
+</div>
+    </body>
+</html>

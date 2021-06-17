@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport"content="width-device-width,initial-scale="1.0>
+<title>Businesses</title>
+<style>
+
+
+/*starts here*/
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url('unnamed.png');
+  background-repeat: no-repeat;
+  background-size: 100px;
+}
+
+.sidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(58, 51, 51);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  margin-left: 1450px;
+ 
+}
+
+.openbtn:hover {
+  background-color:#444;
+}
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+h1{text-align: center;
+  color: rgb(0, 0, 0);
+}
+.img{text-align: center;
+
+}
+
+input[type=text],select,textarea{
+   width: 50%;
+   padding: 5px;
+   border: 1px solid #000000;
+   padding-top: 4px;
+   padding-bottom: 10px;    
+   resize: vertical;
+   
+}
+input[type=submit]:hover{
+background-color: grey;
+}
+input[type=submit]{
+    background-color: #4caf50;
+    color: beige;
+    padding: 10px 90px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px 90px;
+    padding-left: 20px;
+}
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+/*anime here*/
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+   
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(8, 8, 8, 0.75);}
+  to{border-right-color: transparent;}
+}
+</style>
+</head>
+<body>
+
+  <div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">About</a>
+    <a href="more.html">Life after Lockdown</a>
+    <a href="advertisement.html">advertisement</a>
+    <a href="#">Contact</a>
+  </div>
+  
+  <button class="openbtn" onclick="openNav()">☰</button>  
+  
+   <br><br>
+   <div style="main">
+    <h2 class="line-1 anim-typewriter">Business</h2>
+  </div>
+ 
+
+
+<div class="img">
+<img src="unnamed.jpg" width="300px" height="300px">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Marketing</h2>
+<p>The Businesses will be able to advertise available job opportunities,by doing so we will be able to get candidates to apply for vacancies</p>
+<p>We have made a long range of websites that are always recruiting. We made this avialable for new people on the site and fopr those familiar with the website feature.We made it easy for you , click on any website and youll be directed to the domain.If you need any help with applying get in touch with us on the given form below we will reply you as soon as possible.</p>
+<h2>VISIT THE FOLLOWING <b style="color:orange;">LINKS</b> FOR JOB OPPORTUNITIES</h2>
+<p><a href="https://www.networkrecruitment.co.za/job-seekers?quick=true&specialization=IT&utm_source=googleads&utm_medium=ppc&utm_campaign=it_jobs&gclid=Cj0KCQjw8IaGBhCHARIsAGIRRYrBjk4Tn8JPCeSuuhJZw1HRECGPaiGFGU7DFp5_OwR5Flx8sV5tSLQaAnkSEALw_wcB">Network Recruitment</a></p>
+<p><a href="https://www.jobleads.co.za/registration?campaignId=35&countryCode=ZAF&location=Cape%20Town&minSalary=800000&maxSalary=-1&utm_source=google_adwords_10918&utm_medium=sea-ad&utm_campaign=headhunter-za&gclid=Cj0KCQjw8IaGBhCHARIsAGIRRYr7OZYXFUGN65OQfYfIwnl6I3GRDfcstqcsYB2Vts5pVfYEGbMC9C0aAkSuEALw_wcB">Job Leads</a></p>
+<p><a href="https://www.careers24.com/jobs/adverts/1768891-international-b2b-sales-team-leader-cape-town-cbd-cape-town-cbd/?utm_campaign=aggregator&utm_medium=cpc&utm_source=adzuna&rx_campaign=adzuna2&rx_group=104800&rx_job=1768891&rx_medium=cpc&rx_r=none&rx_source=Adzuna&rx_ts=20210609T221026Z&utm_content=adz_2011-7&rx_p=eyJhbGciOiJIUzI1NiJ9.eyJlcG9jaCI6MTYyMzMyMTY3NSwic3JjX2lkIjoxNTY4MCwicHBfbmFtZSI6InJlY3J1aXRpY3MiLCJzb3VyY2VfcmVmIjoiMTc2ODg5MSIsImNsaWNrX2lkIjoiZ0w3UFlkako2eEdndWdYancxMjcwdyJ9.KIUx8CFTH76OZ6VDBWv-IzKQp8JE1TldyfRQ6UeNnF4&rx_viewer=63cd4de2c9d811eb80d8996e35d1384c6653afc2228e4491bcb00c9978781ca6">Careers24</a></p>
+<p><a href="https://www.careerjunction.co.za/artisan-engineering-at-the-city-of-cape-town-job-2416505.aspx?utm_campaign=free&utm_medium=msearche&cid=msearche_Recruitics___free&utm_source=Recruitics&rx_campaign=adzuna3&rx_group=108379&rx_job=2416505&rx_medium=cpc&rx_r=none&rx_source=Adzuna&rx_ts=20210607T221102Z&rx_p=eyJhbGciOiJIUzI1NiJ9.eyJzb3VyY2VfcmVmIjoiMjQxNjUwNSIsInBwX25hbWUiOiJyZWNydWl0aWNzIiwic3JjX2lkIjo2NzkzNSwiZXBvY2giOjE2MjMzMjE5OTYsImNsaWNrX2lkIjoiZERzY0lkbko2eEdLMDcyQWZkV2hDZyJ9.wCP6DdXtP7v5KMkv20jD_lmjf_XbCJ96QGqdicnWzUc&rx_viewer=63cd4de2c9d811eb80d8996e35d1384c6653afc2228e4491bcb00c9978781ca6">Career Junction</a></p>     
+<p><a href="https://za.indeed.com/viewjob?cmp=YourCall-Outsourcing&t=Social+Media+Marketing+Designer+IT+Support&jk=bd901de00d8a9d34&sjdu=Zzi_VW2ygsY1fzh3Ma9ZsE4zIT1NTXCwgFBhdjeTC3MqSjF1klz_K5ECXqTIpsin0wE6b6HwcJaI2S_TW1xN7Q&tk=1f7oopaku3pc6001&adid=370136270&ad=-6NYlbfkN0D_m4l8NAxv0cb8IG5rsre5fxT2DzdgCHQRL7MXd2V_FHNbR3-7tYF4om87qh6HIjMyZHhkF8BDntBPUatBQvTVO30h0GerJOfQMMVcLIpfYpMrIIhh5ofjTEQtqFhV6w-UKJsVRmBWVzIOtW538Y_u5rNRbjWt09k5WPwB9oYpUzM-TTFST4wkVecFDdCPJE4vr3Pj7QLL-JagNoCrcLlefwrpOP-9Hc9WWoHdCIccMGpSin5wj1N2s2TrILFEMw7XqM3oT1j79Qxx5A9KfsS0NdGPvbcqoeZPFlLDDYyWw73Iz-4p-TX1S5gApTBRzmZEH9RDjy7YuRgi7z8hvPYfPn_ZqEAmMH9wo11JeExe1efp6UMos3vzZOEWpRVVUkQ%3D&pub=e4ea14867e765046&utm_campaign=job_alerts&utm_medium=email&utm_source=jobseeker_emails">Indeed</a></p>
+<p><a href="https://www.adzuna.co.za/western-cape">Adzuna</a></p>
+<p><a href="https://receptix.com/">Receptix</a></p>
+<p><a href="https://www.pipefy.com/recruiting-and-employee-onboarding-signup/?utm_medium=cpc&utm_source=capterra&utm_campaign=capterra_recruiting&utm_source=GetApp">Pipefy</a></p>
+<p><a href="https://jobs-bear.com/jobs?geo=za&utm_source=google&utm_campaign=jobListZa&keyword=internships%20jobs&campaignid=9593243961&adgroupid=98132476479&feeditemid=&targetid=kwd-335812820&locinterest=&locpysical=1028745&matchtype=p&gclid=Cj0KCQjw8IaGBhCHARIsAGIRRYp0QZVnfCHHzxsDHcrPpKzWMcMfnXtHGRXILTB4CAOaveke0mWhJ68aAiAVEALw_wcB#finishLoadignJobs">JobsBear</a></p>
+<p><a href="https://neuvoo.co.za/view/?id=09cc29488b5f&oapply=org_v2021-06&source=boston_bulk&utm_source=partner&utm_medium=boston_bulk&puid=gddg3de73aed3aed3dee3de7gddc9dd83de8eadeeddbdadaged37ddfeed3dbdbebddacdcfed3&cg=talent&splitab=1&action=emailAlert">Neuvoo</a></p>
+<p><a href="https://www.theladders.com/apply4me">Ladders</a></p>
+<p><a href="https://www.nextjobfinder.com/subscribe.php?gclid=CjwKCAjw_JuGBhBkEiwA1xmbRQ4ZPQQxhOFnDOps_HG74FtKXsZVNLo_3yHAx91_s6aGiMy3egE3fRoCwyIQAvD_BwE">JobFinder</a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+<p><a href=""></a></p>
+
+
+<h2>Assess the financial damage</h2>
+<p>The first step in developing the rebuilding plan for life after Lockdown is determining just how deeply your business has been affected. The main aim is to help your business get back lost employees faster with us and its hastle free. We work at a 0% rate charge.We understand the damage you went through financially by that we got staff to do the admin for your business.</p>
+
+
+<h2>Revamp your Budget Account for New Spending</h2>
+<p>Coming out of the Lockdown, you may have to spend money before you can make money.<br>like, you may need to spend money hiring and training new employees or rehiring the one's you had lay off inventory may need to be purchased, and you might have to rev up your advertising budget again to start building fresh buzz</p>
+
+<h2>Find out more about how you can get help,Fill in the form</h2><br><br>
+<form>
+<label for="fname"><i class="fa fa-user"></i> First Name</label>
+<input type="text" id="fname" name="firstname" placeholder="Full Name"required>
+<label for="email"><i class="fa fa-envelope"></i> Email</label>
+<input type="text" id="email" name="email" placeholder="Email"required>
+<label for="adr"><i class="fa fa-address"></i> Address</label>
+<input type="text" id="adr" name="address" placeholder="Address"required>
+<label for="city"><i class="fa fa-institution"></i> City</label>
+<input type="text" id="city" name="city" placeholder="city"required>
+<label for="Subject">Subject</label><br>
+<textarea id="Subject"name="Subject"placeholder="Subject..."required style="height: 110px;"></textarea>
+<br> <input type="submit"value="Login">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  </script>
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+            
+            </div>
+    
+            <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="index(1).html">Qhabukazi</a></li>
+                <li><a href="find us.html">Find us</a></li>
+                <li><a href="business.html">Business</a></li>
+                <li><a href="school.html">School</a></li>
+                <li><a href="#">You are ?</a></li>
+                <li><a href="#">Members</a></li>
+              </ul>
+            </div>
+    
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contribution.html">Contribute</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+           <a href="https://qhabukazi-programmes.myshopify.com">Qhabukazi-programmes</a>.
+              </p>
+            </div>
+    
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+           <!---    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   -->
+                <a target="_blank"href="https://www.instagram.com/Qhaweviice/?fbclid=IwAR2WyqHnXVrnNxlRRGKru0z8F2ITrbD4DNImAVJewOFHmsqzAwLH9_kS8Ys">  <img src="images.jpg" width="30px" height="30px"style="padding: 10px;"></a>
+                <a target="_blank"href="https://twitter.com/QViice"><img src="124021.png" width="30px" height="30px"style="padding: 10px;"></a> 
+                <a target="_blank" href="https://www.facebook.com/azola.ntinzi.54"><img src="fe0.jpg" width="30px" height="30px"style="padding: 10px;"></a>
+                <a target="_blank"href="https://web.whatsapp.com/"><img src="Wicon.png" width="30px" height="30px"style="padding: 10px;"></a>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+    
+     
+</body>
+</html>
